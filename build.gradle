@@ -15,15 +15,18 @@ repositories {
 dependencies {
     // get android-support-library from maven to prevent including it more than once
     compile 'com.android.support:support-v4:18.0.0'
+	compile 'com.fasterxml.jackson.core:jackson-core:2.5.3'
+    compile 'com.fasterxml.jackson.core:jackson-databind:2.5.3'
     // only load the jackson lib and skip the android-support-library.jar
-    compile files('libs/jackson-2.2.0-custom.jar')
+    //compile files('libs/jackson-2.2.0-custom.jar')
     //compile project(':libraries:ActionBarSherlock:actionbarsherlock')
-    compile project(':libraries:sense-android-library:sense-android-library')
+    //compile project(':libraries:sense-android-library:sense-android-library')
+	compile project(':libs:android-sense-library:sense-android-library')
 }
 
 android {
     compileSdkVersion 18
-    buildToolsVersion "18.0.0"
+    buildToolsVersion "19.1.0"
 
     sourceSets {
         main {
